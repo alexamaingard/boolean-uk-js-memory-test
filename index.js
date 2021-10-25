@@ -86,12 +86,16 @@ function getLevel(){
 }
 
 function playMemoryTest(level){
-    if(numNumbers === 0 || numNumbers == null){
+    console.log(numNumbers);
+    if(isNaN(numNumbers)){
         alert("You're no fun.");
-    } 
-    createArrayOfRandNum(numNumbers, randomNumbers);
-    alert(userDisplay + "\n" + displayArrAlert(randomNumbers));
-    setTimeout(getNumbers, 1500);
+    }
+    else{
+        createArrayOfRandNum(numNumbers, randomNumbers);
+        alert(userDisplay + "\n" + displayArrAlert(randomNumbers));
+        setTimeout(getNumbers, 1500);
+    }
+
 }
 
 playMemoryTest(getLevel());
